@@ -22,8 +22,8 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: originWhitelist,
-  requireHeader: ['origin', 'x-requested-with'],
+  originWhitelist: ['https://www.livesoccer360.com', ''],
+  requireHeader: [],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
